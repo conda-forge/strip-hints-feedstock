@@ -1,5 +1,5 @@
 {% set name = "strip-hints" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
 
-  sha256: 828dcfe5104296229171ade81ceeefe81d780490d69ab779168704650016db3b
+  sha256: ef254b5a21030529ace3560903dc09452abc76e2355de21177a2b9916f98b9bf
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - strip-hints = strip_hints.strip_hints_main:process_command_line
 
@@ -33,7 +33,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Function and command-line program to strip Python type hints.'
+  summary: Function and command-line program to strip Python type hints.
 
   description: |
     This package provides a command-line command and a corresponding importable function that strips type hints
