@@ -1,14 +1,14 @@
 {% set name = "strip-hints" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.12" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
 
-  sha256: 828dcfe5104296229171ade81ceeefe81d780490d69ab779168704650016db3b
+  sha256: 069863022dcd23c7547e6abb430bf953388006cae32babaa187b87025e795130
 
 build:
   noarch: python
